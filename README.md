@@ -1,5 +1,8 @@
 ## コマンド
 
+ローカルURL
+http://localhost:8080
+
 初回起動
 ```
 docker-compose build && \
