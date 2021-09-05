@@ -1,24 +1,32 @@
-# README
+## コマンド
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ローカルURL
+http://localhost:8080
 
-Things you may want to cover:
+初回起動
+```
+docker-compose build && \
+docker-compose up -d && \
+docker-compose run --rm app bundle exec rails db:create && \
+docker-compose run --rm app bundle exec rails db:migrate
+```
 
-* Ruby version
+その後起動
+```
+docker-compose up -d
+```
 
-* System dependencies
+migrate
+```
+docker-compose run --rm app bundle exec rails db:migrate
+```
 
-* Configuration
+rubocop
+```
+docker-compose run --rm app bundle exec rubocop
+```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+rspec
+```
+docker-compose run --rm app rspec
+```
