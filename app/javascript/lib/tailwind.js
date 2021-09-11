@@ -1,0 +1,1 @@
+require("./tailsind.scss")
