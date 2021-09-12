@@ -15,4 +15,5 @@
 #  updated_at :datetime         not null
 #
 class User < ApplicationRecord
+  enum role: { admin: 0, general: 1 }
 end
