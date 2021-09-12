@@ -10,4 +10,5 @@ import "channels"
 Rails.start()
 ActiveStorage.start()
 
-import "lib/tailwind"
+import "../lib/tailwind.js"
+import "../stylesheets/application.scss"

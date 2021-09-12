@@ -1,1 +1,1 @@
-require("./tailsind.scss")
+require("./tailwind.scss")
