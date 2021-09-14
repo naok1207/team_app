@@ -9,6 +9,7 @@ gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 6.1.4'
 gem 'sass-rails', '>= 6'
+gem 'sprockets', '~> 3.7.2'
 gem 'webpacker', '~> 5.0'
 
 # add
