@@ -10,7 +10,7 @@
 #  name       :integer
 #  nickname   :string
 #  password   :string
-#  role       :integer          default("admin"), not null
+#  role       :integer          default("general"), not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
