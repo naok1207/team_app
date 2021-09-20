@@ -1,18 +1,36 @@
-- if flash.present?
-  = notice
+- if flash.notice.present?
+  div.bg-green-100.border.text-green-700.px-4.py-3.rounded.relative
+    = notice
 
 h1 管理者ユーザー
 
-- @admin_users.each do |user|
-  div
-    = link_to  user.nickname, admin_user_path(user)
-    = link_to '削除', admin_user_path(user), method: :delete, data: {confirm: "削除しますか？"}
+table.table-auto
+  thead
+    tr
+      th.px-4.py-2 ユーザー
+      th.px-4.py-2
+  - @admin_users.each do |user|
+    tbody
+      tr
+        td.border.px-4.py-2
+          = link_to  user.nickname, admin_user_path(user)
+        td.border.px-4.py-2
+          = link_to '削除', admin_user_path(user), method: :delete, data: {confirm: "削除しますか？"}
 
 h1 一般ユーザー
 
-- @general_users.each do |user|
-  div
-    = link_to  user.nickname, admin_user_path(user)
-    = link_to '削除', admin_user_path(user), method: :delete, data: {confirm: "削除しますか？"}
+table.table-auto
+  thead
+    tr
+      th.px-4.py-2 ユーザー
+      th.px-4.py-2
+  - @general_users.each do |user|
+    tbody
+      tr
+        td.border.px-4.py-2
+          = link_to  user.nickname, admin_user_path(user)
+        td.border.px-4.py-2
+          = link_to '削除', admin_user_path(user), method: :delete, data: {confirm: "削除しますか？"}
 
-= link_to '管理者作成', new_admin_user_path
+button.bg-blue-500.hover:bg-blue-700.text-white.font-bold.py-2.px-4.rounded-full.mt-2
+  = link_to '管理者作成', new_admin_user_path

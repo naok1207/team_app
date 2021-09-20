@@ -1,5 +1,14 @@
-h1 詳細画面
-
-= @user.nickname
-br
-= @user.introduce
+table.table-auto.mt-2
+  tbody
+    tr
+      th.border ユーザー名
+      td.border.px-4.py-2
+        = @user.nickname
+    tr
+      th.border メールアドレス
+      td.border.px-4.py-2
+        = @user.email
+    tr
+      th.border 自己紹介
+      td.border.px-4.py-2
+        = @user.introduce
