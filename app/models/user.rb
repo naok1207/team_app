@@ -16,8 +16,6 @@
 #
 class User < ApplicationRecord
   validates :nickname, presence: true
-  # LINEログインの場合、emailが取得できないため、nilを許容
-  validates :email, presence: true, uniqueness: true, allow_nil: true
-
+  validates :email, presence: true, uniqueness: true
   enum role: { admin: 0, general: 1 }
 end
