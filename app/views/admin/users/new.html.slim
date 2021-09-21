@@ -1,0 +1,11 @@
+h1 管理ユーザー作成
+
+= form_with model: [:admin, @user], local: true do |f|
+  div
+    = f.label :nickname, class: 'block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
+    = f.text_field :nickname, class: 'appearance-none block w-full bg-white text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
+  div
+    = f.label :email, class: 'block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
+    = f.email_field :email, class: 'appearance-none block w-full bg-white text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500'
+
+  = f.submit '登録する', class: 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-2'
