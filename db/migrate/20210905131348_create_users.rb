@@ -9,8 +9,12 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.integer :role
       t.text :introduce
       t.string :avatar
+      t.string :crypted_password
+      t.string :salt
+      t.string :password_confirmation
 
       t.timestamps
     end
+    add_index :users, :email, unique: true
   end
 end
