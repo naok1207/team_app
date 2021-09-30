@@ -9,3 +9,5 @@ p Find me in app/views/users/new.html.slim
   = f.label :password_confirmation
   = f.password_field :password_confirmation
   = f.submit "登録"
+
+  = link_to 'Login with Line', auth_at_provider_path(:provider => :line) 

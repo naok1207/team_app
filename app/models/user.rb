@@ -21,9 +21,10 @@
 #
 #  index_users_on_email  (email) UNIQUE
 #
-class User < ApplicationRecord
+class User < ApplicationRecord::Base
   authenticates_with_sorcery!
 
-
+  has_many :authentications, :dependent => :destroy
+  accepts_nested_attributes_for :authentications
   validates :email, uniqueness: true
 end
