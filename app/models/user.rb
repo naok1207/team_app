@@ -21,7 +21,7 @@
 #
 #  index_users_on_email  (email) UNIQUE
 #
-class User < ApplicationRecord::Base
+class User < ApplicationRecord
   authenticates_with_sorcery!
 
   has_many :authentications, :dependent => :destroy
